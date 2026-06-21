@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Yalyna Resort — преміум котеджний комплекс у Славську, Карпати. Басейн, чани, BBQ. Бронюйте онлайн.">
+  <meta name="keywords" content="котеджі Карпати, Славсько, відпочинок Карпати, оренда котеджу, Yalyna Resort">
+  <title>Yalyna Resort — Преміум відпочинок у серці Карпат</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ══════════════════════════════════
+       NAVIGATION
+  ══════════════════════════════════ -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo">
+        <svg class="nav__logo-icon" viewBox="0 0 44 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 50 C6 50 3 38 5 26 C7 14 9 6 9 6" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+          <path d="M14 50 C14 50 10 36 12 22 C14 8 16 2 16 2" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+          <path d="M22 50 C22 50 18 36 20 22 C22 8 24 2 24 2" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+          <path d="M30 50 C30 50 27 38 29 26 C31 14 33 8 33 8" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+        </svg>
+        <div class="nav__logo-text">
+          <span class="nav__name">yalyna</span>
+          <span class="nav__sub">resort</span>
+        </div>
+      </a>
+
+      <button class="nav__burger" id="navBurger" aria-label="Відкрити меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav__links" id="navLinks" role="list">
+        <li><a href="#about" class="nav__link">Про нас</a></li>
+        <li><a href="#cottages" class="nav__link">Котеджі</a></li>
+        <li><a href="#prices" class="nav__link">Ціни</a></li>
+        <li><a href="#infrastructure" class="nav__link">Інфраструктура</a></li>
+        <li><a href="#contacts" class="nav__link">Контакти</a></li>
+        <li><a href="#booking" class="nav__link nav__link--cta">Забронювати</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ══════════════════════════════════
+         HERO
+    ══════════════════════════════════ -->
+    <section class="hero" id="hero">
+      <!-- Replace with <video autoplay muted loop playsinline> or <img> for actual media -->
+      <div class="hero__bg"></div>
+      <div class="hero__overlay"></div>
+      <div class="hero__content">
+        <div class="hero__logo-wrap reveal-up">
+          <svg viewBox="0 0 44 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 50 C6 50 3 38 5 26 C7 14 9 6 9 6" stroke="white" stroke-width="3" stroke-linecap="round" fill="none"/>
+            <path d="M14 50 C14 50 10 36 12 22 C14 8 16 2 16 2" stroke="white" stroke-width="3" stroke-linecap="round" fill="none"/>
+            <path d="M22 50 C22 50 18 36 20 22 C22 8 24 2 24 2" stroke="white" stroke-width="3" stroke-linecap="round" fill="none"/>
+            <path d="M30 50 C30 50 27 38 29 26 C31 14 33 8 33 8" stroke="white" stroke-width="3" stroke-linecap="round" fill="none"/>
+          </svg>
+        </div>
+        <p class="hero__eyebrow reveal-up">Славсько · Карпати · Україна</p>
+        <h1 class="hero__title reveal-up">
+          Преміум відпочинок<br>
+          <em>у серці Карпат</em>
+        </h1>
+        <p class="hero__subtitle reveal-up">
+          Авторські котеджі, підігрітий басейн, карпатські чани<br>і лісова тиша — ідеальне місце для відновлення
+        </p>
+        <div class="hero__cta reveal-up">
+          <a href="#booking" class="btn btn--primary">Забронювати</a>
+          <a href="#cottages" class="btn btn--ghost-white">Переглянути котеджі</a>
+        </div>
+      </div>
+      <div class="hero__scroll-hint" aria-hidden="true">
+        <span>Гортайте</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════
+         ABOUT
+    ══════════════════════════════════ -->
+    <section class="about section" id="about">
+      <div class="container">
+        <div class="about__grid">
+          <div class="about__text reveal-left">
+            <span class="eyebrow">Про нас</span>
+            <h2 class="section-title">Тиша гір у<br><em>преміум форматі</em></h2>
+            <p>Yalyna Resort — камерний комплекс авторських мурованих котеджів, вписаних у карпатський ліс у Славську. Тут панує тиша, свіже повітря і відчуття справжнього відпочинку від повсякдення.</p>
+            <p>Всього 10 хвилин від гори Захар-Беркут і найкращих гірськолижних трас — але головне, що ви знайдете тут, це спокій і відновлення душі.</p>
+            <ul class="about__features">
+              <li><i class="fas fa-mountain"></i> 10 хв до г. Захар-Беркут</li>
+              <li><i class="fas fa-house"></i> Муровані котеджі до 4 осіб</li>
+              <li><i class="fas fa-person-swimming"></i> Підігрітий відкритий басейн</li>
+              <li><i class="fas fa-hot-tub-person"></i> Карпатські чани на дровах</li>
+              <li><i class="fas fa-fire"></i> BBQ-зони для кожного</li>
+              <li><i class="fas fa-paw"></i> Pet-friendly комплекс</li>
+            </ul>
+          </div>
+          <div class="about__gallery reveal-right">
+            <div class="about__img about__img--main">
+              <div class="img-ph img-ph--forest"></div>
+            </div>
+            <div class="about__img about__img--sm1">
+              <div class="img-ph img-ph--interior"></div>
+            </div>
+            <div class="about__img about__img--sm2">
+              <div class="img-ph img-ph--pool"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════
+         COTTAGES
+    ══════════════════════════════════ -->
+    <section class="cottages section" id="cottages">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="eyebrow">Наші котеджі</span>
+          <h2 class="section-title">Оберіть свій<br><em>ідеальний відпочинок</em></h2>
+        </div>
+
+        <!-- Cottage: Смерека -->
+        <article class="cottage reveal-up" id="c-smereka">
+          <div class="cottage__media">
+            <div class="img-ph img-ph--cottage1"></div>
+            <span class="cottage__badge">До 4 осіб</span>
+          </div>
+          <div class="cottage__body">
+            <div class="cottage__head">
+              <h3>Котедж «Смерека»</h3>
+              <div class="cottage__meta">
+                <span><i class="fas fa-vector-square"></i> 48 м²</span>
+                <span><i class="fas fa-users"></i> до 4 осіб</span>
+                <span><i class="fas fa-bed"></i> 2 спальні</span>
+              </div>
+            </div>
+            <p class="cottage__desc">Затишний котедж з відкритою терасою та каміном. Панорамні вікна з виглядом на карпатський ліс, дерев'яний декор і все для комфортного відпочинку.</p>
+            <div class="cottage__tags">
+              <span><i class="fas fa-fire-flame-curved"></i> Камін</span>
+              <span><i class="fas fa-wifi"></i> Wi-Fi</span>
+              <span><i class="fas fa-tv"></i> Smart TV</span>
+              <span><i class="fas fa-thermometer-half"></i> Опалення</span>
+              <span><i class="fas fa-utensils"></i> Кухня</span>
+              <span><i class="fas fa-square-parking"></i> Паркінг</span>
+            </div>
+            <div class="cottage__cal-wrap">
+              <div class="cal-header">
+                <h4>Доступність</h4>
+                <div class="cal-legend">
+                  <span class="cal-legend__free">вільно</span>
+                  <span class="cal-legend__booked">зайнято</span>
+                </div>
+              </div>
+              <div class="calendar-box" id="cal-smereka" data-cottage="smereka"></div>
+            </div>
+            <div class="cottage__footer">
+              <div class="cottage__price">
+                <span class="price-from">від</span>
+                <strong class="price-num">3 500</strong>
+                <span class="price-cur">₴/ніч</span>
+              </div>
+              <a href="#booking" class="btn btn--primary cottage-btn" data-cottage="Котедж «Смерека»">
+                Забронювати
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Cottage: Яворина -->
+        <article class="cottage cottage--reverse reveal-up" id="c-yavoryna">
+          <div class="cottage__media">
+            <div class="img-ph img-ph--cottage2"></div>
+            <span class="cottage__badge cottage__badge--hot">Хіт сезону</span>
+          </div>
+          <div class="cottage__body">
+            <div class="cottage__head">
+              <h3>Котедж «Яворина»</h3>
+              <div class="cottage__meta">
+                <span><i class="fas fa-vector-square"></i> 52 м²</span>
+                <span><i class="fas fa-users"></i> до 4 осіб</span>
+                <span><i class="fas fa-bed"></i> 2 спальні</span>
+              </div>
+            </div>
+            <p class="cottage__desc">Преміум котедж з власною сауною та терасою з виглядом на гори. Авторський інтер'єр у скандинавському стилі з натуральними матеріалами та теплою атмосферою.</p>
+            <div class="cottage__tags">
+              <span><i class="fas fa-hot-tub-person"></i> Сауна</span>
+              <span><i class="fas fa-fire-flame-curved"></i> Камін</span>
+              <span><i class="fas fa-wifi"></i> Wi-Fi</span>
+              <span><i class="fas fa-tv"></i> Smart TV</span>
+              <span><i class="fas fa-mountain"></i> Вид на гори</span>
+              <span><i class="fas fa-utensils"></i> Кухня</span>
+            </div>
+            <div class="cottage__cal-wrap">
+              <div class="cal-header">
+                <h4>Доступність</h4>
+                <div class="cal-legend">
+                  <span class="cal-legend__free">вільно</span>
+                  <span class="cal-legend__booked">зайнято</span>
+                </div>
+              </div>
+              <div class="calendar-box" id="cal-yavoryna" data-cottage="yavoryna"></div>
+            </div>
+            <div class="cottage__footer">
+              <div class="cottage__price">
+                <span class="price-from">від</span>
+                <strong class="price-num">4 000</strong>
+                <span class="price-cur">₴/ніч</span>
+              </div>
+              <a href="#booking" class="btn btn--primary cottage-btn" data-cottage="Котедж «Яворина»">
+                Забронювати
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Cottage: Верховина -->
+        <article class="cottage reveal-up" id="c-verkhovyna">
+          <div class="cottage__media">
+            <div class="img-ph img-ph--cottage3"></div>
+            <span class="cottage__badge cottage__badge--prem">Premium</span>
+          </div>
+          <div class="cottage__body">
+            <div class="cottage__head">
+              <h3>Котедж «Верховина»</h3>
+              <div class="cottage__meta">
+                <span><i class="fas fa-vector-square"></i> 65 м²</span>
+                <span><i class="fas fa-users"></i> до 4 осіб</span>
+                <span><i class="fas fa-bed"></i> 2 спальні + вітальня</span>
+              </div>
+            </div>
+            <p class="cottage__desc">Найпросторіший котедж комплексу з відкритою баньою, джакузі та великою терасою. Максимум комфорту і приватності для тих, хто цінує найкраще.</p>
+            <div class="cottage__tags">
+              <span><i class="fas fa-hot-tub-person"></i> Джакузі</span>
+              <span><i class="fas fa-hot-tub-person"></i> Баня</span>
+              <span><i class="fas fa-fire-flame-curved"></i> Камін</span>
+              <span><i class="fas fa-wifi"></i> Wi-Fi</span>
+              <span><i class="fas fa-tv"></i> Smart TV</span>
+              <span><i class="fas fa-champagne-glasses"></i> Міні-бар</span>
+            </div>
+            <div class="cottage__cal-wrap">
+              <div class="cal-header">
+                <h4>Доступність</h4>
+                <div class="cal-legend">
+                  <span class="cal-legend__free">вільно</span>
+                  <span class="cal-legend__booked">зайнято</span>
+                </div>
+              </div>
+              <div class="calendar-box" id="cal-verkhovyna" data-cottage="verkhovyna"></div>
+            </div>
+            <div class="cottage__footer">
+              <div class="cottage__price">
+                <span class="price-from">від</span>
+                <strong class="price-num">5 500</strong>
+                <span class="price-cur">₴/ніч</span>
+              </div>
+              <a href="#booking" class="btn btn--primary cottage-btn" data-cottage="Котедж «Верховина»">
+                Забронювати
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════
+         PRICES
+    ══════════════════════════════════ -->
+    <section class="prices section" id="prices">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="eyebrow">Ціни</span>
+          <h2 class="section-title">Прозора<br><em>цінова політика</em></h2>
+        </div>
+
+        <div class="prices__table-wrap reveal-up">
+          <table class="prices-table">
+            <thead>
+              <tr>
+                <th>Котедж</th>
+                <th>Будні <small>Пн–Чт</small></th>
+                <th>Вихідні <small>Пт–Нд</small></th>
+                <th>Свята</th>
+                <th>Мін. ночей</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <strong>«Смерека»</strong>
+                  <small>до 4 осіб · 48 м²</small>
+                </td>
+                <td class="p-cell">3 500 ₴</td>
+                <td class="p-cell p-cell--wknd">4 500 ₴</td>
+                <td class="p-cell p-cell--hol">5 000 ₴</td>
+                <td class="p-cell">2 ночі</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>«Яворина»</strong>
+                  <small>до 4 осіб · 52 м²</small>
+                </td>
+                <td class="p-cell">4 000 ₴</td>
+                <td class="p-cell p-cell--wknd">5 000 ₴</td>
+                <td class="p-cell p-cell--hol">5 500 ₴</td>
+                <td class="p-cell">2 ночі</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>«Верховина»</strong>
+                  <small>до 4 осіб · 65 м²</small>
+                </td>
+                <td class="p-cell">5 500 ₴</td>
+                <td class="p-cell p-cell--wknd">7 000 ₴</td>
+                <td class="p-cell p-cell--hol">8 000 ₴</td>
+                <td class="p-cell">2 ночі</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="prices__notes reveal-up">
+          <div class="pnote">
+            <i class="fas fa-child-reaching"></i>
+            <p>Діти до 6 років — <strong>безкоштовно</strong></p>
+          </div>
+          <div class="pnote">
+            <i class="fas fa-paw"></i>
+            <p>Домашні тварини — <strong>+300 ₴/ніч</strong></p>
+          </div>
+          <div class="pnote">
+            <i class="fas fa-hot-tub-person"></i>
+            <p>Чан (оренда) — <strong>500 ₴/сеанс</strong></p>
+          </div>
+          <div class="pnote">
+            <i class="fas fa-fire"></i>
+            <p>BBQ-зона — <strong>включено</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════
+         INFRASTRUCTURE
+    ══════════════════════════════════ -->
+    <section class="infra section" id="infrastructure">
+      <div class="infra__bg"></div>
+      <div class="container infra__container">
+        <div class="section-header reveal-up">
+          <span class="eyebrow eyebrow--light">Інфраструктура</span>
+          <h2 class="section-title section-title--light">Все для<br><em>вашого комфорту</em></h2>
+        </div>
+        <div class="infra__grid">
+          <div class="infra-card reveal-up">
+            <div class="infra-card__icon"><i class="fas fa-person-swimming"></i></div>
+            <h3>Підігрітий басейн</h3>
+            <p>Відкритий басейн із чистою водою. Сезон: травень–жовтень. Шезлонги, парасолі та рушники включено.</p>
+          </div>
+          <div class="infra-card reveal-up">
+            <div class="infra-card__icon"><i class="fas fa-hot-tub-person"></i></div>
+            <h3>Карпатські чани</h3>
+            <p>Дерев'яні чани на дровах із карпатськими травами та хвоєю. Розслаблення під зоряним небом.</p>
+          </div>
+          <div class="infra-card reveal-up">
+            <div class="infra-card__icon"><i class="fas fa-fire"></i></div>
+            <h3>BBQ та мангал</h3>
+            <p>Обладнані зони з мангалами, грилями й дровами. Всі необхідні аксесуари надаємо. Ідеально для вечорів.</p>
+          </div>
+          <div class="infra-card reveal-up">
+            <div class="infra-card__icon"><i class="fas fa-leaf"></i></div>
+            <h3>Природа навколо</h3>
+            <p>Мальовничі пішохідні маршрути прямо від комплексу. Гори, ліс, чисте гірське повітря.</p>
+          </div>
+          <div class="infra-card reveal-up">
+            <div class="infra-card__icon"><i class="fas fa-square-parking"></i></div>
+            <h3>Паркінг</h3>
+            <p>Безкоштовна охоронювана парковка для всіх гостей. Зручний під'їзд, окреме місце для кожного котеджу.</p>
+          </div>
+          <div class="infra-card reveal-up">
+            <div class="infra-card__icon"><i class="fas fa-person-skiing"></i></div>
+            <h3>Лижний сезон</h3>
+            <p>10 хвилин до підйомників Захар-Беркута. Сушарня для одягу, зберігання спорядження.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════
+         PET-FRIENDLY
+    ══════════════════════════════════ -->
+    <section class="pets section" id="pets">
+      <div class="container">
+        <div class="pets__grid">
+          <div class="pets__media reveal-left">
+            <div class="img-ph img-ph--pets"></div>
+          </div>
+          <div class="pets__content reveal-right">
+            <span class="eyebrow">Pet-friendly</span>
+            <h2 class="section-title">Ваші улюбленці<br><em>вітаються тут</em></h2>
+            <p>Yalyna Resort відкритий для гостей із домашніми тваринами. Ми любимо чотирилапих так само, як їхніх господарів.</p>
+            <ul class="pets__rules">
+              <li>
+                <i class="fas fa-circle-check"></i>
+                <span>Доплата: <strong>300 ₴/ніч</strong> за тварину</span>
+              </li>
+              <li>
+                <i class="fas fa-circle-check"></i>
+                <span>Надаємо підстилку, миску та ласощі</span>
+              </li>
+              <li>
+                <i class="fas fa-circle-check"></i>
+                <span>Огороджена зона для вигулу на території</span>
+              </li>
+              <li>
+                <i class="fas fa-circle-check"></i>
+                <span>Вкажіть наявність тварини при бронюванні</span>
+              </li>
+              <li>
+                <i class="fas fa-circle-info"></i>
+                <span>Просимо прибирати після тварини на спільній ділянці</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════
+         LOYALTY
+    ══════════════════════════════════ -->
+    <section class="loyalty section" id="loyalty">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="eyebrow">Спеціальні пропозиції</span>
+          <h2 class="section-title">Особливі знижки<br><em>для особливих людей</em></h2>
+        </div>
+        <div class="loyalty__grid">
+          <div class="loyalty-card reveal-up">
+            <div class="loyalty-card__badge">−15%</div>
+            <div class="loyalty-card__icon"><i class="fas fa-shield-halved"></i></div>
+            <h3>Військовим</h3>
+            <p>Знижка 15% для всіх військовослужбовців, ветеранів та членів їхніх сімей. Потрібно пред'явити посвідчення.</p>
+            <span class="loyalty-card__note">Не сумується з іншими знижками</span>
+          </div>
+          <div class="loyalty-card reveal-up">
+            <div class="loyalty-card__badge">−10%</div>
+            <div class="loyalty-card__icon"><i class="fas fa-cake-candles"></i></div>
+            <h3>День народження</h3>
+            <p>Знижка 10% у тиждень вашого дня народження. Ми зробимо це свято незабутнім! Повідомте при бронюванні.</p>
+            <span class="loyalty-card__note">За 7 днів до і після ДН</span>
+          </div>
+          <div class="loyalty-card reveal-up">
+            <div class="loyalty-card__badge">−5%</div>
+            <div class="loyalty-card__icon"><i class="fas fa-star"></i></div>
+            <h3>Постійним гостям</h3>
+            <p>Після другого візиту ви стаєте нашим постійним гостем і отримуєте знижку 5% на всі наступні бронювання.</p>
+            <span class="loyalty-card__note">З наступного бронювання</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════
+         BOOKING CONDITIONS
+    ══════════════════════════════════ -->
+    <section class="conds section" id="conditions">
+      <div class="container">
+        <div class="conds__grid">
+          <div class="conds__content reveal-left">
+            <span class="eyebrow">Умови</span>
+            <h2 class="section-title">Умови бронювання<br><em>та скасування</em></h2>
+            <div class="conds__list">
+              <div class="cond-item">
+                <div class="cond-item__num">01</div>
+                <div>
+                  <h4>Депозит 50%</h4>
+                  <p>Для підтвердження бронювання — сплата 50% вартості протягом 24 годин після отримання рахунку.</p>
+                </div>
+              </div>
+              <div class="cond-item">
+                <div class="cond-item__num">02</div>
+                <div>
+                  <h4>Безкоштовне скасування</h4>
+                  <p>Скасування без штрафу можливе за 14 і більше діб до заїзду. Депозит повертається повністю.</p>
+                </div>
+              </div>
+              <div class="cond-item">
+                <div class="cond-item__num">03</div>
+                <div>
+                  <h4>Перенесення дат</h4>
+                  <p>Безкоштовне перенесення за 7 і більше діб до заїзду. В межах 3 місяців від оригінальних дат.</p>
+                </div>
+              </div>
+              <div class="cond-item">
+                <div class="cond-item__num">04</div>
+                <div>
+                  <h4>Заїзд / виїзд</h4>
+                  <p>Заїзд з 14:00, виїзд до 12:00. Ранній заїзд або пізній виїзд — за домовленістю (+500 ₴).</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="conds__media reveal-right">
+            <div class="img-ph img-ph--conds"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════
+         BOOKING FORM
+    ══════════════════════════════════ -->
+    <section class="booking section" id="booking">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="eyebrow">Бронювання</span>
+          <h2 class="section-title">Забронюйте<br><em>свій відпочинок</em></h2>
+          <p class="section-sub">Заповніть форму і ми зв'яжемось з вами протягом 2 годин для підтвердження</p>
+        </div>
+
+        <form class="booking-form reveal-up" id="bookingForm"
+              action="https://formspree.io/f/{FORM_ID}"
+              method="POST">
+          <!-- ↑ Замініть {FORM_ID} на ваш ID з formspree.io -->
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="f-name">Ім'я та прізвище <span class="req">*</span></label>
+              <input type="text" id="f-name" name="name" placeholder="Наприклад: Олена Коваленко" required autocomplete="name">
+              <span class="field-error" id="err-name"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="f-phone">Телефон <span class="req">*</span></label>
+              <input type="tel" id="f-phone" name="phone" placeholder="+380 XX XXX XX XX" required autocomplete="tel">
+              <span class="field-error" id="err-phone"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="f-email">Email <span class="req">*</span></label>
+              <input type="email" id="f-email" name="email" placeholder="your@email.com" required autocomplete="email">
+              <span class="field-error" id="err-email"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="f-cottage">Котедж <span class="req">*</span></label>
+              <select id="f-cottage" name="cottage" required>
+                <option value="">Оберіть котедж</option>
+                <option value="Котедж «Смерека»">Котедж «Смерека» (48 м²)</option>
+                <option value="Котедж «Яворина»">Котедж «Яворина» (52 м²)</option>
+                <option value="Котедж «Верховина»">Котедж «Верховина» (65 м²)</option>
+              </select>
+              <span class="field-error" id="err-cottage"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="f-checkin">Дата заїзду <span class="req">*</span></label>
+              <input type="date" id="f-checkin" name="checkin" required>
+              <span class="field-error" id="err-checkin"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="f-checkout">Дата виїзду <span class="req">*</span></label>
+              <input type="date" id="f-checkout" name="checkout" required>
+              <span class="field-error" id="err-checkout"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="f-adults">Дорослих <span class="req">*</span></label>
+              <select id="f-adults" name="adults" required>
+                <option value="">Кількість</option>
+                <option value="1">1 дорослий</option>
+                <option value="2">2 дорослих</option>
+                <option value="3">3 дорослих</option>
+                <option value="4">4 дорослих</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="f-children">Дітей</label>
+              <select id="f-children" name="children">
+                <option value="0">Без дітей</option>
+                <option value="1">1 дитина</option>
+                <option value="2">2 дитини</option>
+                <option value="3">3 дитини</option>
+              </select>
+            </div>
+
+            <div class="form-group form-group--full">
+              <label for="f-pet">Домашня тварина</label>
+              <select id="f-pet" name="pet">
+                <option value="Без тварин">Без тварин</option>
+                <option value="Собака">Собака (+300 ₴/ніч)</option>
+                <option value="Кіт">Кіт (+300 ₴/ніч)</option>
+                <option value="Інша тварина">Інша тварина (уточніть у коментарі)</option>
+              </select>
+            </div>
+
+            <div class="form-group form-group--full">
+              <label for="f-comment">Коментар / побажання</label>
+              <textarea id="f-comment" name="comment" rows="4"
+                placeholder="Особливі побажання, дата народження для знижки, інформація про тварину, ранній заїзд..."></textarea>
+            </div>
+          </div>
+
+          <div class="form-promo">
+            <i class="fas fa-tag"></i>
+            <p>Маєте знижку (військовим, день народження)? Вкажіть у коментарі — ми врахуємо.</p>
+          </div>
+
+          <div class="form-summary" id="formSummary"></div>
+
+          <button type="submit" class="btn btn--primary btn--lg" id="submitBtn">
+            <span>Надіслати заявку</span>
+            <i class="fas fa-arrow-right"></i>
+          </button>
+
+          <p class="form-secure">
+            <i class="fas fa-lock"></i>
+            Ваші дані захищені і не передаються третім особам. Відповідаємо протягом 2 годин.
+          </p>
+        </form>
+
+        <div class="booking-success" id="bookingSuccess">
+          <div class="booking-success__icon"><i class="fas fa-circle-check"></i></div>
+          <h3>Дякуємо за вашу заявку!</h3>
+          <p>Ми отримали вашу заявку на бронювання і зв'яжемось з вами найближчим часом для підтвердження. Очікуйте дзвінка або повідомлення в Instagram.</p>
+          <button class="btn btn--ghost" onclick="location.reload()">Нова заявка</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════
+         CONTACTS
+    ══════════════════════════════════ -->
+    <section class="contacts section" id="contacts">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="eyebrow">Контакти</span>
+          <h2 class="section-title">Зв'яжіться<br><em>з нами</em></h2>
+        </div>
+        <div class="contacts__grid">
+          <div class="contacts__info reveal-left">
+            <a href="tel:+380958670769" class="contact-card">
+              <div class="contact-card__icon"><i class="fas fa-phone"></i></div>
+              <div>
+                <h4>Телефон</h4>
+                <p>+38 (095) 867-07-69</p>
+                <small>Щодня з 8:00 до 22:00</small>
+              </div>
+            </a>
+            <a href="https://instagram.com/yalyna.resort" target="_blank" rel="noopener" class="contact-card">
+              <div class="contact-card__icon"><i class="fab fa-instagram"></i></div>
+              <div>
+                <h4>Instagram</h4>
+                <p>@yalyna.resort</p>
+                <small>Пишіть в Direct — відповідаємо швидко</small>
+              </div>
+            </a>
+            <div class="contact-card">
+              <div class="contact-card__icon"><i class="fas fa-location-dot"></i></div>
+              <div>
+                <h4>Адреса</h4>
+                <p>Славсько, Львівська область</p>
+                <a href="https://maps.google.com/?q=Slavske,Lviv+Oblast,Ukraine" target="_blank" rel="noopener" class="map-link">
+                  Відкрити на Google Maps <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="contacts__map reveal-right">
+            <div class="map-embed">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10583.42!2d23.4258!3d49.1986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4736c8d5d7c2e5c1%3A0x0!2zU2xhdnNrZQ!5e0!3m2!1suk!2sua!4v1234567890"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" title="Yalyna Resort на карті">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════
+       FOOTER
+  ══════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <svg viewBox="0 0 44 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 50 C6 50 3 38 5 26 C7 14 9 6 9 6" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+              <path d="M14 50 C14 50 10 36 12 22 C14 8 16 2 16 2" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+              <path d="M22 50 C22 50 18 36 20 22 C22 8 24 2 24 2" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+              <path d="M30 50 C30 50 27 38 29 26 C31 14 33 8 33 8" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+            </svg>
+            <div class="footer__logo-text">
+              <span>yalyna</span>
+              <small>resort</small>
+            </div>
+          </div>
+          <p>Преміум котеджний комплекс у серці Карпат. Славсько, Львівська область.</p>
+          <div class="footer__social">
+            <a href="https://instagram.com/yalyna.resort" target="_blank" rel="noopener" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="tel:+380958670769" aria-label="Телефон">
+              <i class="fas fa-phone"></i>
+            </a>
+          </div>
+        </div>
+        <div class="footer__nav">
+          <h4>Навігація</h4>
+          <ul>
+            <li><a href="#about">Про нас</a></li>
+            <li><a href="#cottages">Котеджі</a></li>
+            <li><a href="#prices">Ціни</a></li>
+            <li><a href="#infrastructure">Інфраструктура</a></li>
+            <li><a href="#booking">Забронювати</a></li>
+          </ul>
+        </div>
+        <div class="footer__info">
+          <h4>Інформація</h4>
+          <ul>
+            <li><a href="#pets">Pet-friendly</a></li>
+            <li><a href="#loyalty">Знижки</a></li>
+            <li><a href="#conditions">Умови бронювання</a></li>
+            <li><a href="#contacts">Контакти</a></li>
+            <li><a href="admin/" rel="nofollow">Адмін-панель</a></li>
+          </ul>
+        </div>
+        <div class="footer__contact">
+          <h4>Зв'яжіться</h4>
+          <p><i class="fas fa-phone"></i><a href="tel:+380958670769">+38 (095) 867-07-69</a></p>
+          <p><i class="fab fa-instagram"></i><a href="https://instagram.com/yalyna.resort" target="_blank" rel="noopener">@yalyna.resort</a></p>
+          <p><i class="fas fa-location-dot"></i>Славсько, Карпати</p>
+          <p class="footer__hours"><i class="fas fa-clock"></i>8:00 – 22:00 щодня</p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2024 Yalyna Resort. Всі права захищені.</p>
+        <p>Славсько · Карпати · Україна</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-top" id="backTop" aria-label="На початок">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

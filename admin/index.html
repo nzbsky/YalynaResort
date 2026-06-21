@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yalyna Resort — Адмін-панель</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+  <!-- LOGIN SCREEN -->
+  <div class="login-screen" id="loginScreen">
+    <div class="login-box">
+      <div class="login-logo">
+        <svg viewBox="0 0 44 54" fill="none"><path d="M6 50C6 50 3 38 5 26C7 14 9 6 9 6" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" fill="none"/><path d="M14 50C14 50 10 36 12 22C14 8 16 2 16 2" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" fill="none"/><path d="M22 50C22 50 18 36 20 22C22 8 24 2 24 2" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" fill="none"/><path d="M30 50C30 50 27 38 29 26C31 14 33 8 33 8" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" fill="none"/></svg>
+        <div><span>yalyna</span><small>resort admin</small></div>
+      </div>
+      <h1>Вхід в адмін-панель</h1>
+      <form id="loginForm">
+        <div class="login-field">
+          <label>Пароль</label>
+          <div class="pw-wrap">
+            <input type="password" id="loginPw" placeholder="Введіть пароль" autocomplete="current-password">
+            <button type="button" class="pw-toggle" id="pwToggle"><i class="fas fa-eye"></i></button>
+          </div>
+        </div>
+        <p class="login-error" id="loginError"></p>
+        <button type="submit" class="admin-btn admin-btn--primary">Увійти</button>
+        <p class="login-note">За замовчуванням: <strong>yalyna2024</strong> (змінити в admin.js)</p>
+      </form>
+    </div>
+  </div>
+
+  <!-- ADMIN APP -->
+  <div class="admin-app" id="adminApp" style="display:none;">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar__logo">
+        <svg viewBox="0 0 44 54" fill="none"><path d="M6 50C6 50 3 38 5 26C7 14 9 6 9 6" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" fill="none"/><path d="M14 50C14 50 10 36 12 22C14 8 16 2 16 2" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" fill="none"/><path d="M22 50C22 50 18 36 20 22C22 8 24 2 24 2" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" fill="none"/><path d="M30 50C30 50 27 38 29 26C31 14 33 8 33 8" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" fill="none"/></svg>
+        <div><span>yalyna</span><small>resort admin</small></div>
+      </div>
+      <nav class="sidebar__nav">
+        <a href="#" class="snav-link active" data-page="dashboard"><i class="fas fa-chart-line"></i>Dashboard</a>
+        <a href="#" class="snav-link" data-page="calendar"><i class="fas fa-calendar-alt"></i>Календар</a>
+        <a href="#" class="snav-link" data-page="bookings"><i class="fas fa-list"></i>Заявки</a>
+        <a href="#" class="snav-link" data-page="export"><i class="fas fa-file-export"></i>Експорт</a>
+      </nav>
+      <div class="sidebar__footer">
+        <a href="../index.html" target="_blank" class="snav-link"><i class="fas fa-external-link-alt"></i>На сайт</a>
+        <button class="snav-link" id="logoutBtn"><i class="fas fa-sign-out-alt"></i>Вийти</button>
+      </div>
+    </aside>
+
+    <!-- Content -->
+    <main class="admin-main">
+      <header class="admin-header">
+        <div>
+          <h1 id="pageTitle">Dashboard</h1>
+          <p id="pageSubtitle">Ласкаво просимо, адміністратор</p>
+        </div>
+        <div class="header-actions">
+          <span class="sync-status" id="syncStatus"><i class="fas fa-circle"></i> Локальне сховище</span>
+        </div>
+      </header>
+
+      <!-- PAGE: Dashboard -->
+      <div class="page" id="page-dashboard">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-card__icon" style="background:#d0ecd5;color:#1a4a24"><i class="fas fa-calendar-check"></i></div>
+            <div>
+              <div class="stat-card__num" id="stat-booked">—</div>
+              <div class="stat-card__label">Зайнятих дат</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card__icon" style="background:#fbe8e5;color:#c4715a"><i class="fas fa-house"></i></div>
+            <div>
+              <div class="stat-card__num">3</div>
+              <div class="stat-card__label">Котеджі</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card__icon" style="background:#f0eade;color:#b8936a"><i class="fas fa-inbox"></i></div>
+            <div>
+              <div class="stat-card__num" id="stat-forms">0</div>
+              <div class="stat-card__label">Збережених заявок</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card__icon" style="background:#e8f0f8;color:#2a5090"><i class="fas fa-link"></i></div>
+            <div>
+              <div class="stat-card__num">Formspree</div>
+              <div class="stat-card__label">Джерело форм</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dash-grid">
+          <div class="admin-card">
+            <div class="admin-card__head"><h3>Швидкий огляд доступності</h3></div>
+            <div id="dash-overview"></div>
+          </div>
+          <div class="admin-card">
+            <div class="admin-card__head"><h3>Останні дії</h3></div>
+            <div id="dash-log">
+              <p class="empty-state">Ще немає дій у цій сесії</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PAGE: Calendar -->
+      <div class="page" id="page-calendar" style="display:none;">
+        <div class="cal-controls">
+          <div class="cottage-tabs" id="cottageTabs">
+            <button class="ctab active" data-key="smereka">«Смерека»</button>
+            <button class="ctab" data-key="yavoryna">«Яворина»</button>
+            <button class="ctab" data-key="verkhovyna">«Верховина»</button>
+          </div>
+          <div class="cal-actions">
+            <button class="admin-btn admin-btn--sm admin-btn--ghost" id="clearMonthBtn">
+              <i class="fas fa-eraser"></i> Очистити місяць
+            </button>
+            <button class="admin-btn admin-btn--sm admin-btn--primary" id="saveCalBtn">
+              <i class="fas fa-save"></i> Зберегти
+            </button>
+          </div>
+        </div>
+        <div class="cal-hint">
+          <i class="fas fa-info-circle"></i>
+          Клікайте на дати щоб позначити як <strong>зайняті</strong> (червоний) або <strong>вільні</strong> (зелений).
+          Сірі дати в минулому — недоступні для зміни.
+        </div>
+        <div class="admin-calendar-wrap">
+          <div id="admin-cal"></div>
+        </div>
+        <div class="booked-list-wrap">
+          <h4>Зайняті дати: <span id="activeCottageLabel"></span></h4>
+          <div id="bookedList" class="booked-tags"></div>
+        </div>
+      </div>
+
+      <!-- PAGE: Bookings -->
+      <div class="page" id="page-bookings" style="display:none;">
+        <div class="bookings-head">
+          <p class="info-note">
+            <i class="fas fa-info-circle"></i>
+            Заявки надходять через Formspree на вашу пошту. Тут ви можете зберігати їх вручну після отримання.
+          </p>
+          <button class="admin-btn admin-btn--primary" id="addBookingBtn">
+            <i class="fas fa-plus"></i> Додати заявку
+          </button>
+        </div>
+        <div class="table-wrap">
+          <table class="admin-table" id="bookingsTable">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Ім'я</th>
+                <th>Телефон</th>
+                <th>Котедж</th>
+                <th>Заїзд</th>
+                <th>Виїзд</th>
+                <th>Осіб</th>
+                <th>Статус</th>
+                <th>Дії</th>
+              </tr>
+            </thead>
+            <tbody id="bookingsTbody"></tbody>
+          </table>
+          <p class="empty-state" id="bookingsEmpty">Ще немає заявок. Додайте першу!</p>
+        </div>
+      </div>
+
+      <!-- PAGE: Export -->
+      <div class="page" id="page-export" style="display:none;">
+        <div class="export-grid">
+          <div class="admin-card">
+            <div class="admin-card__head"><h3>Експорт даних</h3></div>
+            <div class="export-options">
+              <button class="export-btn" id="exportJsonBtn">
+                <i class="fas fa-file-code"></i>
+                <strong>JSON</strong>
+                <span>Всі дані (зайняті дати + заявки)</span>
+              </button>
+              <button class="export-btn" id="exportCsvBtn">
+                <i class="fas fa-file-csv"></i>
+                <strong>CSV</strong>
+                <span>Тільки заявки для Excel/Sheets</span>
+              </button>
+            </div>
+          </div>
+          <div class="admin-card">
+            <div class="admin-card__head"><h3>Імпорт даних</h3></div>
+            <p style="margin-bottom:1rem;color:#666;font-size:0.9rem;">Завантажте раніше збережений JSON-файл</p>
+            <input type="file" id="importFile" accept=".json" style="display:none;">
+            <button class="export-btn" id="importBtn">
+              <i class="fas fa-file-import"></i>
+              <strong>Імпорт JSON</strong>
+              <span>Відновити дані з файлу</span>
+            </button>
+          </div>
+          <div class="admin-card">
+            <div class="admin-card__head"><h3>Інтеграція</h3></div>
+            <div class="integration-list">
+              <div class="integration-item">
+                <i class="fas fa-table" style="color:#0f9d58"></i>
+                <div>
+                  <strong>Google Sheets</strong>
+                  <p>Використовуйте Formspree webhook → Zapier → Google Sheets для автоматичного збереження заявок</p>
+                </div>
+              </div>
+              <div class="integration-item">
+                <i class="fas fa-database" style="color:#ff6d00"></i>
+                <div>
+                  <strong>Airtable / Firebase</strong>
+                  <p>Замініть localStorage в admin.js на API-виклики до вашої бази даних</p>
+                </div>
+              </div>
+              <div class="integration-item">
+                <i class="fab fa-telegram" style="color:#2ca5e0"></i>
+                <div>
+                  <strong>Telegram-бот</strong>
+                  <p>Налаштуйте Formspree → Make/Zapier → Telegram для миттєвих сповіщень</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Modal: Add Booking -->
+  <div class="modal-overlay" id="bookingModal" style="display:none;">
+    <div class="modal">
+      <div class="modal-head">
+        <h3>Нова заявка</h3>
+        <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+      </div>
+      <form class="modal-form" id="bookingModalForm">
+        <div class="modal-grid">
+          <div class="mform-group">
+            <label>Ім'я *</label>
+            <input type="text" id="mb-name" required placeholder="Ім'я та прізвище">
+          </div>
+          <div class="mform-group">
+            <label>Телефон *</label>
+            <input type="tel" id="mb-phone" required placeholder="+380...">
+          </div>
+          <div class="mform-group">
+            <label>Котедж *</label>
+            <select id="mb-cottage" required>
+              <option value="">Оберіть</option>
+              <option>Котедж «Смерека»</option>
+              <option>Котедж «Яворина»</option>
+              <option>Котедж «Верховина»</option>
+            </select>
+          </div>
+          <div class="mform-group">
+            <label>Email</label>
+            <input type="email" id="mb-email" placeholder="email@...">
+          </div>
+          <div class="mform-group">
+            <label>Заїзд *</label>
+            <input type="date" id="mb-checkin" required>
+          </div>
+          <div class="mform-group">
+            <label>Виїзд *</label>
+            <input type="date" id="mb-checkout" required>
+          </div>
+          <div class="mform-group">
+            <label>Дорослих</label>
+            <select id="mb-adults">
+              <option>1</option><option>2</option><option>3</option><option>4</option>
+            </select>
+          </div>
+          <div class="mform-group">
+            <label>Статус</label>
+            <select id="mb-status">
+              <option value="new">Нова</option>
+              <option value="confirmed">Підтверджена</option>
+              <option value="deposit">Депозит сплачено</option>
+              <option value="done">Завершено</option>
+              <option value="cancelled">Скасовано</option>
+            </select>
+          </div>
+          <div class="mform-group mform-group--full">
+            <label>Коментар</label>
+            <textarea id="mb-comment" rows="2" placeholder="Нотатки..."></textarea>
+          </div>
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="admin-btn admin-btn--ghost" id="modalCancel">Скасувати</button>
+          <button type="submit" class="admin-btn admin-btn--primary">Зберегти</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>
